@@ -1,11 +1,16 @@
 <?php
 
-require_once "conn.php";
+if (isset($_GET['no'])){
+    $no = $_GET['no'];
 
-$sql = "DELETE FROM mahasiswa WHERE `no`=5";
+    require_once "conn.php";
 
-if ($conn->query($sql) === TRUE) {
-    echo "Record Data Deleted Successfully";
-} else {
-    echo "Error ". $sql . "<br>" . $conn->error;
+    // Delete data
+    $sql = "DELETE FROM mahasiswa WHERE `no`=$no";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Record Data Deleted Successfully";
+    } else {
+        echo "Error ". $sql . "<br>" . $conn->error;
+    }
 }
