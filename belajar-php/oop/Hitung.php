@@ -1,5 +1,5 @@
 <?php
-
+// OOP Lanjutan
 class Hitung {
     public function tambah(int $a, int $b) {
         return $a + $b;
