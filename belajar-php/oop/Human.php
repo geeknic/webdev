@@ -1,5 +1,5 @@
 <?php
-
+// belajar oop
 class Human {
     public $name;
     public $height;
